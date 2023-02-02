@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  locust:
+    image: locustio/locust:2.5.1
+    ports:
+      - "8089:8089"
+      - "5557:5557"
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --master
+
+  load-server:
+    env_file: ./.env
+    image: load-test:latest
+    depends_on:
+      - "locust"

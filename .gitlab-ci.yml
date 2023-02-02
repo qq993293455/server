@@ -1,0 +1,64 @@
+# 环境变量，会覆盖include的重名环境变量
+variables:
+  GOSUMDB: "off"
+  IC_SEND_API: "http://im-api.skyunion.net/msg"
+  IC_SEND_TOKEN: "df8a445dd467a62bf1d7bdc5066dd918"
+  IC_SEND_TARGET: "group"
+  IC_SEND_ROOM: "10062115"
+  IC_SEND_CONTENT_TYPE: 1
+  IC_SEND_CONTENT: ""
+
+stages:
+  - build
+  - test
+  - lint                    # Lint代码检查
+
+#该格式对语法要求严格，最好在gitlab ci lint。  下面语句块注释前面必须有tab键
+#ci lint 地址：http://gitlab.cdl5.org/chengdu-l5/coin-server/-/ci/lint
+.igg_chat: &igg_chat |
+  function send_ic(){
+    if [ $CI_COMMIT_BRANCH  != "develop" ];then
+     echo  "该分支不在develop 不会推送IC"
+     return
+    fi
+
+  # IC发布通知
+      now=$(date "+%Y-%m-%d %H:%M:%S")
+      echo "提交信息："$CI_COMMIT_MESSAGE"" >> ic
+      echo "时间："${now}"" >> ic
+      echo "发布者：${GITLAB_USER_NAME}" >> ic
+      IC_SEND_CONTENT=$(cat ic)
+      echo curl -X POST -H "Content-Type:application/x-www-form-urlencoded" ${IC_SEND_API} -d "token=${IC_SEND_TOKEN}" -d "target=${IC_SEND_TARGET}" -d "room=${IC_SEND_ROOM}" -d "title=$1" -d "content_type=${IC_SEND_CONTENT_TYPE}" -d "content=${IC_SEND_CONTENT}"
+      curl -X POST -H "Content-Type:application/x-www-form-urlencoded" ${IC_SEND_API} -d "token=${IC_SEND_TOKEN}" -d "target=${IC_SEND_TARGET}" -d "room=${IC_SEND_ROOM}" -d "title=$1" -d "content_type=${IC_SEND_CONTENT_TYPE}" -d "content=${IC_SEND_CONTENT}"
+  }
+
+Build:
+  stage: build
+  script:
+    - echo "build"
+  after_script:
+  - *igg_chat
+  - if [[ $CI_JOB_STATUS == "success" ]] ; then echo ""; else echo "build 失败"; fi
+  tags:
+    - server
+
+# Test:
+#   stage: test
+#   script:
+#     - echo "test"
+#   after_script:
+#   - *igg_chat
+#   - if [[ $CI_JOB_STATUS == "success" ]] ; then echo ""; else echo "test 失败"; fi
+#   tags:
+#     - server
+
+# Lint:
+#   stage: lint
+#   script:
+#     - golangci-lint cache clean
+#     - golangci-lint run --config golangci-lint.yaml
+#   after_script:
+#   - *igg_chat
+#   - if [[ $CI_JOB_STATUS == "success" ]] ; then echo ""; else send_ic "lint 失败"; fi
+#   tags:
+#     - server

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metalib>
+    <table name="login" comment="登录">
+        <field name="id" comment="自增id" />
+        <field name="time" comment="时间" />
+        <field name="igg_id" comment="iggId" />
+        <field name="server_id" comment="服务器id" />
+        <field name="xid" comment="唯一id 用于保证幂等" />
+        <field name="role_id" comment="角色id" />
+        <field name="user_id" comment="用户id" />
+        <field name="device_id" comment="设备id" />
+        <field name="ip" comment="用户ip地址" />
+        <field name="rule_version" comment="规则版本" />
+    </table>
+    <table name="register" comment="注册">
+        <field name="id" comment="自增id" />
+        <field name="time" comment="时间" />
+        <field name="igg_id" comment="iggId" />
+        <field name="server_id" comment="服务器id" />
+        <field name="xid" comment="唯一id 用于保证幂等" />
+        <field name="role_id" comment="角色id" />
+        <field name="user_id" comment="用户id" />
+        <field name="device_id" comment="设备id" />
+        <field name="ip" comment="用户ip地址" />
+        <field name="rule_version" comment="规则版本" />
+    </table>
+    <table name="item" comment="道具消耗">
+        <field name="id" comment="自增id" />
+        <field name="time" comment="时间" />
+        <field name="igg_id" comment="iggId" />
+        <field name="server_id" comment="服务器id" />
+        <field name="xid" comment="唯一id 用于保证幂等" />
+        <field name="role_id" comment="角色id" />
+        <field name="operate_type" comment="操作类型" />
+        <field name="item_id" comment="道具id" />
+        <field name="quality" comment="道具品质" />
+        <field name="old_num" comment="旧的数量" />
+        <field name="new_num" comment="新的数量" />
+    </table>
+</metalib>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metalib>
+    <table name="objectlog_use_item" comment="道具消耗">
+        <field name="id" comment="日志ID" />
+        <field name="time" comment="日志時間" />
+        <field name="iggid" comment="IGGID" />
+        <field name="serverid" comment="服務器ID" />
+        <field name="operatetype" comment="操作类型" >
+            <dic>item_use_type</dic>
+        </field>
+        <field name="itemid" comment="道具ID" >
+            <dic case_field="operatetype" when_value="1">item_id</dic>
+            <dic case_field="operatetype" when_value="2">rename_item_id</dic>
+        </field>
+        <field name="itemrank" comment="道具品级" />
+        <field name="oldnum" comment="操作前數量" />
+        <field name="newnum" comment="操作后數量" />
+    </table>
+    <table name="objectlog_get_item" comment="道具获得">
+        <field name="id" comment="日志ID" />
+        <field name="time" comment="日志時間" />
+        <field name="iggid" comment="IGGID" />
+        <field name="serverid" comment="服務器ID" />
+        <field name="" comment="" />
+        <field name="" comment="" />
+    </table>
+    <table name="playerlog_hero_stepup" comment="英雄升階">
+        <field name="id" comment="日志ID" />
+        <field name="time" comment="日志時間" />
+        <field name="iggid" comment="IGGID" />
+        <field name="serverid" comment="服務器ID" />
+        <field name="" comment="" >
+            <dic> </dic>
+        </field>
+    </table>
+</metalib>

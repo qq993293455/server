@@ -1,0 +1,19 @@
+# env
+.idea/
+game-server.exe
+bin/game-server
+main.exe
+*.exe
+*.exe~
+server
+client
+*.log
+!/tcp-client/nutsdb/0.dat
+load-test/load-test
+load-test/load-test.exe
+load-test/.env
+.vscode/
+bin
+*.tar.gz
+pikaviewer/static
+golang-20*

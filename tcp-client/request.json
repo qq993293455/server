@@ -1,0 +1,195 @@
+{
+	"dungeon_match.DungeonMatch.ConfirmInviteRequest": {
+		"confirm_typ": "ConfirmTypIn"
+	},
+	"dungeon_match.DungeonMatch.CreateRoomRequest": {
+		"dungeon_id": "1"
+	},
+	"dungeon_match.DungeonMatch.DismissRoomRequest": {},
+	"dungeon_match.DungeonMatch.GetCurrRoomRequest": {},
+	"dungeon_match.DungeonMatch.GetRandomRoomRequest": {
+		"dungeon_id": "1",
+		"num": "5"
+	},
+	"dungeon_match.DungeonMatch.GetRoomCntRequest": {},
+	"dungeon_match.DungeonMatch.InviteOnlineAckRequest": {},
+	"dungeon_match.DungeonMatch.InviteRequest": {
+		"role_id": "2QZS1"
+	},
+	"dungeon_match.DungeonMatch.JoinRoomRequest": {
+		"room_id": "10410004",
+		"dungeon_id": "2"
+	},
+	"dungeon_match.DungeonMatch.LeaveRoomRequest": {
+		"room_id": "10410004",
+		"dungeon_id": "2"
+	},
+	"dungeon_match.DungeonMatch.StartBattleRequest": {
+		"battle_server_id": 0
+	},
+	"guild_filter_service.Guild.GuildFilterRecommendRequest": {},
+	"less_service.Friend.AddRequestRequest": {
+		"role_id": "2QZS1"
+	},
+	"less_service.Guild.EnterRequest": {},
+	"less_service.Guild.GuildRankRequest": {
+		"start": 3,
+		"end": 4
+	},
+	"less_service.Guild.InviteJoinRequest": {
+		"role_id": ""
+	},
+	"less_service.Guild.JoinApplyRequest": {
+		"id": ""
+	},
+	"less_service.User.CheatSetLevelRequest": {
+		"level": "10"
+	},
+	"less_service.User.GetOwnAvatarRequest": {},
+	"less_service.User.LevelUpgradeRequest": {},
+	"less_service.User.RoleLoginRequest": {
+		"user_id": "formation2",
+		"server_id": "12",
+		"app_key": "",
+		"language": "0",
+		"rule_version": "",
+		"version": "0",
+		"device_id": "",
+		"battle_id": "0"
+	},
+	"rank_service.RankService.TopRankGetRequest": {},
+	"roguelike_match.RoguelikeMatch.CheatChangeBossRequest": {},
+	"roguelike_match.RoguelikeMatch.RLCreateRoomRequest": {
+		"roguelike_id": "1"
+	},
+	"roguelike_match.RoguelikeMatch.RLDismissRoomRequest": {},
+	"roguelike_match.RoguelikeMatch.RLGetTodayBossRequest": {},
+	"roguelike_match.RoguelikeMatch.RLJoinRoomRequest": {
+		"room_id": "10490002010",
+		"roguelike_id": "1"
+	},
+	"roguelike_match.RoguelikeMatch.RLKickRequest": {
+		"role_id": "robot116548520140"
+	},
+	"roguelike_match.RoguelikeMatch.RLLeaveRoomRequest": {
+		"room_id": "1655862599",
+		"roguelike_id": "1"
+	},
+	"roguelike_match.RoguelikeMatch.RLMatchOfflineRequest": {
+		"config_ids": []
+	},
+	"roguelike_match.RoguelikeMatch.RLStartBattleRequest": {},
+	"service.Activity.CheatRechargeRequest": {
+		"amount": "50000"
+	},
+	"service.Activity.DailySaleInfoRequest": {},
+	"service.Activity.StellargemShopBuyRequest": {
+		"idx": "1"
+	},
+	"service.Activity.WeeklySaleInfoRequest": {},
+	"service.Bag.CheatAddItemRequest": {
+		"item_id": "102",
+		"count": "9999999"
+	},
+	"service.Bag.GetBagInfoRequest": {},
+	"service.EquipForge.EquipForgeInfoRequest": {},
+	"service.EquipForge.ForgeRequest": {
+		"recipe_id": 100018
+	},
+	"service.Formation.GetRequest": {},
+	"service.Formation.NewRequest": {},
+	"service.Formation.SaveRequest": {
+		"assembles": [
+			{
+				"hero0": "4001",
+				"heroOrigin0": "2",
+				"hero1": "2001",
+				"heroOrigin1": "4",
+				"name": "编队1"
+			},
+			{
+				"name": "编队2"
+			}
+		]
+	},
+	"service.Gacha.GachaRequest": {
+		"gacha_id": "1",
+		"count": "10"
+	},
+	"service.GuildBoss.CanEnterRequest": {},
+	"service.GuildBoss.GetBattleServerInfoRequest": {},
+	"service.GuildBoss.GetCurrDayRewardsRequest": {},
+	"service.GuildBoss.RewardCurrDayRequest": {},
+	"service.MapEvent.CheatAddEventRequest": {
+		"event_id": "1",
+		"map_id": "1",
+		"game_id": "1",
+		"point": "0"
+	},
+	"service.MapGame.TreasureChestRequest": {
+		"option": "1",
+		"skill_success": true,
+		"event_id": "1",
+		"game_id": "1"
+	},
+	"service.Rank.GetTopRankRequest": {},
+	"service.Relics.RelicsComposeRequest": {
+		"relics_id": "50002"
+	},
+	"service.Relics.RelicsReadRequest": {
+		"relics_id": "50002"
+	},
+	"service.Shop.GetAreaShopListRequest": {},
+	"service.Shop.GetCampShopListRequest": {},
+	"service.Shop.GetGuildShopListRequest": {},
+	"service.Shop.GetShopListRequest": {},
+	"service.SystemUnlock.CheatUnlockSystemRequest": {
+		"system_id": "SystemPadding"
+	},
+	"service.Talent.CheatAddCommonRequest": {
+		"num": "5"
+	},
+	"service.Talent.CheatTalentLevelMaxRequest": {
+		"origin_id": "7"
+	},
+	"service.Talent.ChooseBuildRequest": {
+		"old_config_id": "4001",
+		"new_config_id": "4002"
+	},
+	"service.Talent.ComposeStoneRequest": {
+		"main_id": "600003",
+		"sacrifice_ids": [
+			"600003",
+			"600003",
+			"600003"
+		]
+	},
+	"service.Talent.GetsRequest": {},
+	"service.Talent.InlayStoneRequest": {
+		"config_id": "4002",
+		"talent_id": "210001",
+		"skill_stone_id": "600003",
+		"hole_idx": "2"
+	},
+	"service.Talent.LevelUpRequest": {
+		"config_id": "4002",
+		"talent_id": "210002"
+	},
+	"service.Talent.PlateUnlockRequest": {
+		"config_id": "2001",
+		"plate_idx": "1",
+		"loc": "-4000"
+	},
+	"service.Talent.RemoveStoneRequest": {
+		"config_id": "4",
+		"talent_id": "110001",
+		"hole_idx": "0"
+	},
+	"service.Talent.ResetRequest": {
+		"config_id": "4002"
+	},
+	"service.User.GetBattleSettingDataRequest": {},
+	"service.User.UseCdKeyRequest": {
+		"cd_key": "MTRSVRV0NCD2"
+	}
+}
